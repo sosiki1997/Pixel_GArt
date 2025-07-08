@@ -10,7 +10,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.image_processing import ImageProcessor
 
 # 导入我们的处理函数
-from ..utils.process import process_image
+from utils.process import process_image
 
 def create_gradio_interface(generator):
     """创建Gradio界面"""

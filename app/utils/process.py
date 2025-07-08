@@ -1,6 +1,6 @@
 from PIL import Image
 # 确保导入路径正确
-from .image_processing import ImageProcessor
+from utils.image_processing import ImageProcessor
 import time
 import gradio as gr
 import traceback
