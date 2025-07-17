@@ -1,3 +1,16 @@
+<!-- ---
+title: Pixel GArt
+emoji: 🌖
+colorFrom: red
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.35.0
+app_file: app.py
+pinned: false
+license: mit
+short_description: AI tool for turning sketches into pixel art.
+--- -->
+
 ---
 title: Pixel GArt
 emoji: 🌖
@@ -21,9 +34,9 @@ An AI-based pixel art generator that transforms hand-drawn sketches into pixel-s
 
 ## 🌟 Features
 
-- Convert hand-drawn sketches into pixel-style images  
+- Convert hand‑drawn sketches into pixel‑style images  
 - Optional text prompt to guide the generation  
-- Real-time generation progress display  
+- Real‑time generation progress display  
 - Simple and intuitive web UI (built with Gradio)  
 
 ---
@@ -31,8 +44,8 @@ An AI-based pixel art generator that transforms hand-drawn sketches into pixel-s
 ## 📦 Installation
 
 ```bash
-git clone [your-repo-url]
-cd pixel-art-generator
+git clone [your‑repo‑url]
+cd Pixel_GArt
 conda create -n pixel_venv python=3.12
 conda activate pixel_venv
 pip install gradio==3.44.4
@@ -53,7 +66,7 @@ Python 3.10 or 3.12
 
 Conda (recommended)
 
-8GB+ RAM
+8 GB RAM or more
 
 Modern browser (Chrome / Firefox / Safari)
 
@@ -64,7 +77,7 @@ Simple line drawings work best
 
 Do not refresh the page during generation
 
-If error occurs, ensure gradio==3.44.4 is installed
+If errors occur, ensure gradio==3.44.4 is installed
 
 🧱 Tech Stack
 FastAPI
@@ -93,40 +106,36 @@ MIT License
 🌟 功能特点
 将手绘草图转换为像素风格图片
 
-支持输入文本提示词引导生成
+支持文本提示词引导生成
 
 实时显示生成进度
 
 简洁直观的 Web 界面（基于 Gradio）
 
 📦 安装与使用
-按照英文版步骤运行即可。
+请参考上方英文步骤执行。
 
 </details> <details> <summary>📙 日本語版の説明（クリックで展開）</summary>
-🎨 ピクセルアート・ジェネレーター
-手描きのスケッチをピクセル風のアートに変換する AI ツールです。
+🎨 ピクセルアート ジェネレーター
+手描きスケッチをピクセルアートに変換する AI ツールです。
 
-🚀 このプロジェクトは Gradio==3.44.4 を使用しています。互換性のため、必ずこのバージョンを使用してください。
+🚀 このプロジェクトは Gradio==3.44.4 を使用しています。必ずこのバージョンをご使用ください。
 
 🌟 特徴
 スケッチをピクセルアートに変換
 
-テキストプロンプトの入力も可能
+テキストプロンプトにも対応
 
-生成中の進行状況を表示
+生成中に進行状況を表示
 
-シンプルで使いやすい Gradio ベースの UI
+シンプルで使いやすい Gradio UI
 
-📦 インストールと使用方法
+📦 インストール方法
 英語版の手順をご参照ください。
 
 </details>
 🖼️ 画像の生成例（Sample Outputs）
-以下は、実際に本ツールで生成されたピクセルアートの例です：
+以下は本ツールで生成されたアートの例です：
 
 <p align="center"> <img src="readme_img/output_1.png" width="45%" /> <img src="readme_img/output_1_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_2.png" width="45%" /> <img src="readme_img/output_2_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_3.png" width="45%" /> <img src="readme_img/output_3_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_4.png" width="45%" /> <img src="readme_img/output_4_snapshot.png" width="45%" /> </p>
-生成結果は、入力したスケッチとプロンプトに応じて変化します。シンプルな線画ほど良好な変換結果が得られます。
-
-yaml
-复制
-编辑
+Generated art changes based on input sketch and prompt. Simple line art yields better results.
