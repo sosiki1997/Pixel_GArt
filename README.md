@@ -15,7 +15,9 @@ short_description: AI tool for turning sketches into pixel art.
 
 This project is a pixel art generator that leverages Stable Diffusion 1.5 combined with the PixelArtRedmond LoRA to transform hand-drawn sketches into stunning retro-style pixel masterpieces. Designed to unleash creativity, it offers users an easy way to create high-quality pixel art inspired by classic video games.
 
-## 📦 Installation ### 1. Clone the project
+## 📦 Installation 
+
+### 1. Clone the project
 
 ```
 bash
@@ -62,12 +64,14 @@ python -m app.main
 <details>
   <summary>📖 中文说明（点击展开）</summary>
 
+
 本项目是一个像素画生成器，结合了 Stable Diffusion 1.5 和 PixelArtRedmond LoRA，能将手绘草图转化为令人惊艳的复古风格像素艺术。旨在释放创意，让用户轻松创作出高品质的像素艺术作品，灵感源自经典电子游戏。
 
 </details>
 
 <details>
   <summary>📖 日本語の説明（クリックで展開）</summary>
+  
 
 本プロジェクトは、Stable Diffusion 1.5 と PixelArtRedmond LoRA を組み合わせて、手描きのスケッチを圧巻のレトロ風ピクセルアートに変換するジェネレーターです。クラシックゲームにインスパイアされた高品質なピクセルアートを手軽に制作できることを目的としています。
 
