@@ -50,14 +50,12 @@ This project is a pixel art generator based on AI. You can generate pixel-style 
 
 > 以下は生成された画像の例です。画像は左から右へ、上から下に並んでいます。
 
-<p align="center">
-  <img src="./readme_img/output1.png" width="250"/>
-  <img src="./readme_img/output2.png" width="250"/>
-</p>
-<p align="center">
-  <img src="./readme_img/output3.png" width="250"/>
-  <img src="./readme_img/output4.png" width="250"/>
-</p>
+<div align="center">
+  <img src="./readme_img/output1.png" width="200"/>
+  <img src="./readme_img/output2.png" width="200"/>
+  <img src="./readme_img/output3.png" width="200"/>
+  <img src="./readme_img/output4.png" width="200"/>
+</div>
 
 ---
 
