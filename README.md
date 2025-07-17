@@ -127,3 +127,6 @@ MIT License
 <p align="center"> <img src="readme_img/output_1.png" width="45%" /> <img src="readme_img/output_1_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_2.png" width="45%" /> <img src="readme_img/output_2_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_3.png" width="45%" /> <img src="readme_img/output_3_snapshot.png" width="45%" /> </p> <p align="center"> <img src="readme_img/output_4.png" width="45%" /> <img src="readme_img/output_4_snapshot.png" width="45%" /> </p>
 生成結果は、入力したスケッチとプロンプトに応じて変化します。シンプルな線画ほど良好な変換結果が得られます。
 
+yaml
+复制
+编辑
