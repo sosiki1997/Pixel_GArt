@@ -20,7 +20,6 @@ This project is a pixel art generator that leverages Stable Diffusion 1.5 combin
 ### 1. Clone the project
 
 ```
-bash
 git clone git@github.com:sosiki1997/Pixel_GArt.git
 
 cd Pixel_GArt
@@ -29,7 +28,6 @@ cd Pixel_GArt
 ### 2. Create and activate conda environment
 
 ```
-bash
 conda create -n pixel_venv python=3.12
 
 conda activate pixel_venv
@@ -38,7 +36,6 @@ conda activate pixel_venv
 ### 3. Install dependencies
 
 ```
-bash
 pip install gradio==3.44.4
 
 pip install -r requirements.txt
@@ -51,7 +48,6 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 ### 4. Run the server
 
 ```
-bash
 python -m app.main
 ```
 
@@ -71,7 +67,7 @@ python -m app.main
 
 <details>
   <summary>📖 日本語の説明（クリックで展開）</summary>
-  
+
 
 本プロジェクトは、Stable Diffusion 1.5 と PixelArtRedmond LoRA を組み合わせて、手描きのスケッチを圧巻のレトロ風ピクセルアートに変換するジェネレーターです。クラシックゲームにインスパイアされた高品質なピクセルアートを手軽に制作できることを目的としています。
 
