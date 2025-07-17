@@ -23,7 +23,7 @@ def create_gradio_interface(generator):
         try:
             # 调用OpenCV处理函数
             result_image = process_image(input_image, pixel_size=pixel_size)
-            return result_image, "处理成功"
+            return result_image, "処理が成功しました"
         except Exception as e:
             import traceback
             traceback.print_exc()
@@ -41,25 +41,26 @@ def create_gradio_interface(generator):
             img_byte_arr = img_byte_arr.getvalue()
             
             # 调用generator的generate函数
-            result_image = generator.generate(img_byte_arr, prompt, guidance_scale=guidance_scale)
-            
-            return result_image, "生成成功"
+            # result_image = generator.generate(img_byte_arr, prompt, guidance_scale=guidance_scale)
+            result_image = generator.generate(prompt=prompt, guidance_scale=guidance_scale)
+
+            return result_image, "処理が成功しました。"
         except Exception as e:
             import traceback
             traceback.print_exc()
             return None, f"生成失败: {str(e)}"
     
     # 创建Gradio界面
-    with gr.Blocks(title="像素画生成器") as demo:
-        gr.Markdown("# 像素画生成器")
+    with gr.Blocks(title="ドット絵ピクセルアート") as demo:
+        gr.Markdown("# ドット絵ピクセルアート")
         
         with gr.Tabs():
-            with gr.TabItem("OpenCV像素化"):
+            with gr.TabItem("OpenCV ピクセル化"):
                 with gr.Row():
                     with gr.Column():
                         # 输入区域 - 设置固定大小
                         input_image_opencv = gr.Image(
-                            label="上传草图", 
+                            label="スケッチをアップロードまたは描画", 
                             type="pil",
                             height=512,  # 设置固定高度
                             width=512,   # 设置固定宽度
@@ -69,27 +70,27 @@ def create_gradio_interface(generator):
                         )
                         
                         pixel_size = gr.Slider(minimum=5, maximum=50, value=20, step=1, 
-                                            label="像素大小")
+                                            label="ピクセルサイズ")
                         
-                        process_btn_opencv = gr.Button("生成像素画 (OpenCV)")
+                        process_btn_opencv = gr.Button("ドット絵を生成 (OpenCV)")
                     
                     with gr.Column():
                         # 输出区域 - 也设置固定大小
                         output_image_opencv = gr.Image(
-                            label="生成结果",
+                            label="生成結果",
                             height=512,  # 设置固定高度
                             width=512,   # 设置固定宽度
                             container=True,  # 使用容器包裹
                             show_download_button=True,  # 显示下载按钮
                         )
-                        output_message_opencv = gr.Textbox(label="状态")
+                        output_message_opencv = gr.Textbox(label="ステータス")
             
-            with gr.TabItem("Stable Diffusion生成"):
+            with gr.TabItem("Stable Diffusionで生成"):
                 with gr.Row():
                     with gr.Column():
                         # 输入区域
                         input_image_diffusion = gr.Image(
-                            label="上传参考图", 
+                            label="参考画像をアップロード", 
                             type="pil",
                             height=512,
                             width=512,
@@ -98,9 +99,9 @@ def create_gradio_interface(generator):
                         )
                         
                         prompt = gr.Textbox(
-                            label="提示词", 
-                            placeholder="描述你想要的像素艺术风格...",
-                            value="pixel art style, 16-bit, retro game art"
+                            label="プロンプト", 
+                            placeholder="希望するピクセルアートのスタイルを説明してください...",
+                            value="Pixel Art, PixArFK"
                         )
                         
                         guidance_scale = gr.Slider(
@@ -108,21 +109,21 @@ def create_gradio_interface(generator):
                             maximum=15.0, 
                             value=7.5, 
                             step=0.5,
-                            label="引导系数 (越高越遵循提示词)"
+                            label="ガイダンスの強さ（数値が高いほど指定した内容に沿いやすくなります）"
                         )
                         
-                        process_btn_diffusion = gr.Button("生成像素画 (Stable Diffusion)")
+                        process_btn_diffusion = gr.Button("ドット絵を作成 (Stable Diffusion)")
                     
                     with gr.Column():
                         # 输出区域
                         output_image_diffusion = gr.Image(
-                            label="生成结果",
+                            label="生成結果",
                             height=512,
                             width=512,
                             container=True,
                             show_download_button=True,
                         )
-                        output_message_diffusion = gr.Textbox(label="状态")
+                        output_message_diffusion = gr.Textbox(label="ステータス")
         
         # 连接OpenCV处理按钮和函数
         process_btn_opencv.click(
